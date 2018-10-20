@@ -20,8 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ComercializacaoActivity" />
-        <activity android:name=".FichaComercializacaoActivity" />
+        <activity android:name=".ComercializacaoActivity" android:label="Comercialização" />
+        <activity android:name=".FichaComercializacaoActivity" android:label="Ficha de Venda" />
         <activity
             android:name=".Tanques"
             android:label="@string/title_activity_tanques"
@@ -33,7 +33,10 @@
         <activity
             android:name=".AddTanque"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CadastrarBiometria"></activity>
+        <activity android:name=".CadastrarBiometria" />
+        <activity android:name=".TutorialActivity" android:label="Tutoriais e novas Tec." />
+        <activity android:name=".IntesivoTutorialActivity"  android:label="Intensivo" />
+        <activity android:name=".semi_IntensivoTutorial" android:label="Semi-Intensivo"></activity>
     </application>
 
 </manifest>

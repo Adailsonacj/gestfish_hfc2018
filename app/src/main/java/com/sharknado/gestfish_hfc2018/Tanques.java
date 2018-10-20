@@ -97,15 +97,23 @@ public class Tanques extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Intent intent = new Intent(this, ComercializacaoActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_gallery) {
+            Intent intent = new Intent(this, Cadastro.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
             Intent vrintention = new Intent(this, Home.class);
             startActivity(vrintention);
             finish();
         } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(this,TutorialActivity.class);
+            startActivity(intent);
+            finish();
 
         }
 

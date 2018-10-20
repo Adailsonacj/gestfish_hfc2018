@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#32CD32"
-    android:padding="10dp"
+    android:background="#008577"
+    android:padding="20dp"
     tools:context=".FichaComercializacaoActivity">
 
     <Spinner
@@ -87,7 +87,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="14dp"
         android:layout_marginBottom="11dp"
-        android:background="@drawable/button_cancelar"
+        android:background="#adff2f"
         android:text="cancelar" />
 
     <Button
@@ -98,7 +98,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="256dp"
         android:layout_marginBottom="12dp"
-        android:background="@drawable/button_confirmar2"
+        android:background="#00574b"
         android:text="Confirmar" />
 
     <TextView

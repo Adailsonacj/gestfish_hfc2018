@@ -44,10 +44,7 @@ public class ComercializacaoActivity extends AppCompatActivity {
             preencherLItView(fichaComercializacao);
 
 
-
-            Toast.makeText(this, fichaComercializacao.getNomeVendedor(), Toast.LENGTH_SHORT).show();
         }
-        Toast.makeText(this, "On Create", Toast.LENGTH_SHORT).show();
 
 
         novoComercializacao.setOnClickListener(new View.OnClickListener() {
@@ -61,12 +58,6 @@ public class ComercializacaoActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, "On Resume", Toast.LENGTH_SHORT).show();
     }
 
     public void preencherLItView(fichaComercializacao ficha){
