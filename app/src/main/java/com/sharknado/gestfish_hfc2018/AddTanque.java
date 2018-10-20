@@ -48,8 +48,6 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
     }
 
     public void addTanque(View view) {
-        Intent vrintention = new Intent(this, Tanques.class);
-        startActivity(vrintention);
         finish();
     }
 
