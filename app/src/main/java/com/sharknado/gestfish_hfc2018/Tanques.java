@@ -36,7 +36,7 @@ public class Tanques extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         listView = findViewById(R.id.listTanques);
-        ArrayList<TanqueModel> tanques = tanqueDao.findAll();
+        ArrayList<TanqueModel> tanques = tanqueDao.getBase();
         tanquesAdapter = new TanquesAdapter(this, tanques);
         listView.setAdapter(tanquesAdapter);
 
@@ -117,5 +117,6 @@ public class Tanques extends AppCompatActivity
     public void addTanque(View view) {
         Intent vrintention = new Intent(this, AddTanque.class);
         startActivity(vrintention);
+        finish();
     }
 }

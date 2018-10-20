@@ -16,16 +16,24 @@
             android:theme="@style/AppNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ComercializacaoActivity"></activity>
+        <activity android:name=".ComercializacaoActivity" />
         <activity android:name=".FichaComercializacaoActivity" />
-
-        <activity android:name=".Tanques" android:theme="@style/AppNoActionBar" android:label="@string/title_activity_tanques"/>
-        <activity android:name=".Biometria"></activity>
-        <activity android:name=".Cadastro" android:theme="@style/AppNoActionBar"></activity>
-        <activity android:name=".AddTanque" android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tanques"
+            android:label="@string/title_activity_tanques"
+            android:theme="@style/AppNoActionBar" />
+        <activity android:name=".Biometria" />
+        <activity
+            android:name=".Cadastro"
+            android:theme="@style/AppNoActionBar" />
+        <activity
+            android:name=".AddTanque"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CadastrarBiometria"></activity>
     </application>
 
 </manifest>

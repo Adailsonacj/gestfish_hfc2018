@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="15dp"
+    tools:context=".CadastrarBiometria">
+
+    <EditText
+        android:id="@+id/editTaxaAlimentacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTaxaMort"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Taxa de alimentação"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editQtd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTaxaAlimentacao"
+        android:layout_alignStart="@+id/editTaxaAlimentacao"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Qtd. de peixes"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editBiomassa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editQtd"
+        android:layout_alignStart="@+id/editQtd"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="273dp"
+        android:ems="10"
+        android:hint="Biomassa Total"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTaxaMort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Taxa de Mortalidade"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/Registrar"
+        android:layout_width="93dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@+id/editAmostra"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="134dp"
+        android:background="@color/colorBotaoPrimary"
+        android:onClick="registrar"
+        android:text="Salvar"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="Biometria"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editAmostra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_alignTop="@+id/editBiomassa"
+        android:ems="10"
+        android:hint="Amostra"
+        android:inputType="textPersonName" />
+
+</RelativeLayout>

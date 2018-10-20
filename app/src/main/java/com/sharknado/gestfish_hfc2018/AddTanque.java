@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
 import com.sharknado.gestfish_hfc2018.dao.EspecieDao;
+import com.sharknado.gestfish_hfc2018.dao.TanqueDao;
 import com.sharknado.gestfish_hfc2018.model.Especie;
+import com.sharknado.gestfish_hfc2018.model.TanqueModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +21,11 @@ import java.util.List;
 public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private Spinner spTipo;
-    private Spinner spTipoProducao;
     private Spinner spEspecie;
+    private EditText tamanho;
+    private EditText quantidade;
+
+    TanqueDao td = new TanqueDao();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,8 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
         setContentView(R.layout.activity_add_tanque);
 
         spTipo = findViewById(R.id.spTipo);
+        tamanho = findViewById(R.id.editTamanho);
+        quantidade = findViewById(R.id.editQtd);
         List<String> listTipo = new ArrayList<>();
         listTipo.add("Tanque-Escavado");
         listTipo.add("Tanque-Rede");
@@ -34,20 +42,16 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listTipo);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spTipo.setAdapter(arrayAdapter);
-        //spTipo.setOnItemSelectedListener(this);
-        spTipoProducao = findViewById(R.id.spTipoProducao);
-        List<String> listTipoProducao = new ArrayList<>();
-        listTipoProducao.add("Intensivo");
-        listTipoProducao.add("Semi-Intensivo");
-        ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listTipoProducao);
-        spTipoProducao.setAdapter(arrayAdapter1);
-        spEspecie = findViewById(R.id.spEspecie);
         EspecieDao es = new EspecieDao();
-        ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, es.findAll());
+        spEspecie = findViewById(R.id.spEspecie);
+
+        ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, es.getBase());
         spEspecie.setAdapter(arrayAdapter2);
     }
 
     public void addTanque(View view) {
+        TanqueModel tm = new TanqueModel((String)spTipo.getSelectedItem(), (Especie) spEspecie.getSelectedItem(), Float.valueOf(tamanho.getText().toString()).floatValue(), Integer.valueOf(quantidade.getText().toString()));
+        td.insertTanque(tm);
         finish();
     }
 
@@ -59,5 +63,11 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void finish() {
+        startActivity(new Intent(this, Tanques.class));
+        super.finish();
     }
 }

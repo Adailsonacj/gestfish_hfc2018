@@ -18,14 +18,6 @@ public class EspecieDao extends DaoGenerica<Especie> {
         getBase().add(new Especie("Tilápia"));
     }
 
-    public ArrayList<String> findAll (){
-        ArrayList<String> especies = new ArrayList<>();
-        for (Especie c : getBase()) {
-                especies.add(c.getNome());
-        }
-        return especies.isEmpty() ? null : especies;
-    }
-
     public Especie findByNome(String nome) {
         for (Especie e : getBase()) {
             if (e.getNome().toLowerCase().equals(nome.toLowerCase())) {
@@ -34,4 +26,5 @@ public class EspecieDao extends DaoGenerica<Especie> {
         }
         return null;
     }
+
 }

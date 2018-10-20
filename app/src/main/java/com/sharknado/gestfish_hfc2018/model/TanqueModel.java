@@ -2,14 +2,12 @@ package com.sharknado.gestfish_hfc2018.model;
 
 public class TanqueModel {
     private String tipo;
-    private String tipoProducao;
-    private String especie;
+    private Especie especie;
     private float tamanho;
     private int qtdPeixes;
 
-    public TanqueModel(String tipo, String tipoProducao, String especie, float tamanho, int qtdPeixes) {
+    public TanqueModel(String tipo, Especie especie, float tamanho, int qtdPeixes) {
         this.tipo = tipo;
-        this.tipoProducao = tipoProducao;
         this.especie = especie;
         this.tamanho = tamanho;
         this.qtdPeixes = qtdPeixes;
@@ -32,19 +30,11 @@ public class TanqueModel {
         this.tipo = tipo;
     }
 
-    public String getTipoProducao() {
-        return tipoProducao;
-    }
-
-    public void setTipoProducao(String tipoProducao) {
-        this.tipoProducao = tipoProducao;
-    }
-
-    public String getEspecie() {
+    public Especie getEspecie() {
         return especie;
     }
 
-    public void setEspecie(String especie) {
+    public void setEspecie(Especie especie) {
         this.especie = especie;
     }
 

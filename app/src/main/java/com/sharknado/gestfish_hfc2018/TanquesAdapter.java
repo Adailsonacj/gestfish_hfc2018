@@ -51,11 +51,9 @@ public class TanquesAdapter extends BaseAdapter {
         TextView viewTipo = layout.findViewById(R.id.viewTipo);
         viewTipo.setText(tanque.getTipo());
 
-        TextView viewTipoProducao = layout.findViewById(R.id.viewTipoProducao);
-        viewTipoProducao.setText(tanque.getTipoProducao());
 
         TextView viewEspecie = layout.findViewById(R.id.viewEspecie);
-        viewEspecie.setText(tanque.getEspecie());
+        viewEspecie.setText(tanque.getEspecie().getNome());
 
         TextView viewTamanho = layout.findViewById(R.id.viewTamanho);
         viewTamanho.setText(String.valueOf(tanque.getTamanho())+" m³");

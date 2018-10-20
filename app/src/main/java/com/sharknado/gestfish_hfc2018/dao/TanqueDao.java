@@ -1,28 +1,30 @@
 package com.sharknado.gestfish_hfc2018.dao;
 
+import com.sharknado.gestfish_hfc2018.Tanques;
 import com.sharknado.gestfish_hfc2018.model.Cidade;
 import com.sharknado.gestfish_hfc2018.model.TanqueModel;
 import com.sharknado.gestfish_hfc2018.model.Usuario;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TanqueDao extends DaoGenerica<TanqueModel> {
+    private static ArrayList<TanqueModel> models = new ArrayList<>();
+    EspecieDao especieDao = new EspecieDao();
     public TanqueDao() {
         super();
-        getBase().add(new TanqueModel("Tanque Escavado", "Semi-Intensivo", "Tambaqui", 20, 1000));
-        getBase().add(new TanqueModel("Tanque Rede", "Intensivo", "Pacu", 50, 2000));
-        getBase().add(new TanqueModel("Tanque Elevado", "Intensivo", "Tilápia", 60, 2000));
+        if (models.isEmpty()){
+        models.add(new TanqueModel("Tanque Escavado", especieDao.findByNome("Tilápia"),  20, 1000));
+        models.add(new TanqueModel("Tanque Rede", especieDao.findByNome("Pacu"),  50, 2000));
+        models.add(new TanqueModel("Tanque Elevado", especieDao.findByNome("Tambacu"), 60, 2000));}
     }
 
-    public ArrayList<TanqueModel> findAll() {
-        ArrayList<TanqueModel> tanque = new ArrayList<>();
-        for (TanqueModel c : getBase()) {
-            tanque.add(c);
-        }
-        return tanque.isEmpty() ? null : tanque;
+    public void insertTanque(TanqueModel tanqueModel){
+        models.add(tanqueModel);
     }
 
-    public void insertTanque(){
-
+    @Override
+    public ArrayList<TanqueModel> getBase() {
+        return models;
     }
 }
