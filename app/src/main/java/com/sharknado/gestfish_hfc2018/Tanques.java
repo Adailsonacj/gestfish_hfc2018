@@ -15,7 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.sharknado.gestfish_hfc2018.models.TanqueModel;
+import com.sharknado.gestfish_hfc2018.model.TanqueModel;
 
 import java.util.ArrayList;
 
@@ -24,6 +24,7 @@ public class Tanques extends AppCompatActivity
 
     ListView listView;
     TanquesAdapter tanquesAdapter;
+    public static ArrayList<TanqueModel> tanques = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,21 +34,13 @@ public class Tanques extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         listView = findViewById(R.id.listTanques);
-        ArrayList<TanqueModel> tanques = new ArrayList<>();
         tanques.add(new TanqueModel("Tanque Escavado", "Semi-Intensivo", "Tambaqui", 20, 1000));
         tanques.add(new TanqueModel("Tanque Rede", "Intensivo", "Pacu", 50, 2000));
         tanques.add(new TanqueModel("Tanque Elevado", "Intensivo", "Tilápia", 60, 2000));
         tanquesAdapter = new TanquesAdapter(this, tanques);
         listView.setAdapter(tanquesAdapter);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.addTanque);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -116,5 +109,10 @@ public class Tanques extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void addTanque(View view) {
+        Intent vrintention = new Intent(this, AddTanque.class);
+        startActivity(vrintention);
     }
 }

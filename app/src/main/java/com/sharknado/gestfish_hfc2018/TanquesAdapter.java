@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.sharknado.gestfish_hfc2018.models.TanqueModel;
+import com.sharknado.gestfish_hfc2018.model.TanqueModel;
 
 import java.util.ArrayList;
 

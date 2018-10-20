@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Home"  android:theme="@style/AppNoActionBar">
+        <activity
+            android:name=".Home"
+            android:theme="@style/AppNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +23,8 @@
         <activity
             android:name=".Tanques"
             android:label="@string/title_activity_tanques"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddTanque"></activity>
     </application>
 
 </manifest>

@@ -6,7 +6,7 @@ public class UsuarioDao  extends DaoGenerica<Usuario>{
     public UsuarioDao() {
         super();
         getBase().add(new Usuario("Daniel", "Carvalho", "danielarraiscarvalho@gmail.com", "12345678"));
-        getBase().add(new Usuario("Adailson", "Aguiar", "adailsonaguiar@gmail.com", "12345678"));
+        getBase().add(new Usuario("Adailson", "Aguiar", ".", "."));
         getBase().add(new Usuario("Nareilson", "Bispo", "nareilsonbispo@gmail.com", "12345678"));
     }
 

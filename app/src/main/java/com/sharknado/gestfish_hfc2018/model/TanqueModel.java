@@ -1,4 +1,4 @@
-package com.sharknado.gestfish_hfc2018.models;
+package com.sharknado.gestfish_hfc2018.model;
 
 public class TanqueModel {
     private String tipo;
