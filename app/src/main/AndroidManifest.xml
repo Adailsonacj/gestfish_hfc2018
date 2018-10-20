@@ -22,7 +22,7 @@
         <activity android:name=".ComercializacaoActivity"></activity>
         <activity android:name=".FichaComercializacaoActivity" />
 
-        <activity android:name=".Tanques" android:label="@string/title_activity_tanques"/>
+        <activity android:name=".Tanques" android:theme="@style/AppNoActionBar" android:label="@string/title_activity_tanques"/>
         <activity android:name=".Biometria"></activity>
         <activity android:name=".Cadastro" android:theme="@style/AppNoActionBar"></activity>
         <activity android:name=".AddTanque" android:theme="@style/AppTheme.NoActionBar" />
