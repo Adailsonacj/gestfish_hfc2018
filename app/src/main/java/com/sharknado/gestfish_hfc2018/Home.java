@@ -1,5 +1,6 @@
 package com.sharknado.gestfish_hfc2018;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -34,6 +35,9 @@ public class Home extends AppCompatActivity{
         if ((usuarioLogado = usuarioDao.findByEmail(email.getText().toString())) != null){
             if (usuarioLogado.getSenha().equals(senha.getText().toString())){
                 Toast.makeText(getBaseContext(), "Login realizado com sucesso" , Toast.LENGTH_SHORT ).show();
+                Intent vrintention = new Intent(this, Tanques.class);
+                startActivity(vrintention);
+                finish();
             }
         }else{
             Toast.makeText(getBaseContext(), "Senha ou E-mail incorretos" , Toast.LENGTH_SHORT ).show();
