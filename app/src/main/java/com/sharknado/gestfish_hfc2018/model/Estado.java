@@ -24,4 +24,9 @@ public class Estado {
     public void setUs(String us) {
         this.us = us;
     }
+
+    @Override
+    public String toString() {
+        return nome;
+    }
 }

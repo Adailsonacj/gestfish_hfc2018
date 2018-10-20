@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    android:padding="10dp"
+    tools:context=".Cadastro">
+
+    <Button
+        android:id="@+id/login2"
+        android:layout_width="110dp"
+        android:layout_height="42dp"
+        android:layout_alignBottom="@+id/cidades"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-106dp"
+        android:background="@color/colorBotaoPrimary"
+        android:onClick="cadastrar"
+        android:text="Finalizar"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/Nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvCadastro"
+        android:layout_marginBottom="-68dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <EditText
+        android:id="@+id/sobrenome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Nome"
+        android:layout_alignBottom="@+id/Nome"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="-50dp"
+        android:ems="10"
+        android:hint="Sobrenome"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <EditText
+        android:id="@+id/senhaCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/emailCadastro"
+        android:layout_alignBottom="@+id/emailCadastro"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="-50dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <EditText
+        android:id="@+id/emailCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/sobrenome"
+        android:layout_alignBottom="@+id/sobrenome"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="-50dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <Spinner
+        android:id="@+id/estados"
+        android:layout_width="362dp"
+        android:layout_height="42dp"
+        android:layout_alignStart="@+id/senhaCadastro"
+        android:layout_alignBottom="@+id/senhaCadastro"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="-50dp" />
+
+    <Spinner
+        android:id="@+id/cidades"
+        android:layout_width="362dp"
+        android:layout_height="42dp"
+        android:layout_alignStart="@+id/estados"
+        android:layout_alignBottom="@+id/estados"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="-50dp" />
+
+    <Spinner
+        android:id="@+id/tipoProducao"
+        android:layout_width="362dp"
+        android:layout_height="42dp"
+        android:layout_alignStart="@+id/cidades"
+        android:layout_alignBottom="@+id/cidades"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="-50dp" />
+
+    <TextView
+        android:id="@+id/tvCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Cadastro"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

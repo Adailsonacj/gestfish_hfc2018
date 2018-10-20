@@ -6,6 +6,7 @@ public class EstadoDao extends DaoGenerica<Estado> {
 
     public EstadoDao() {
         super();
+        getBase().add(new Estado("Selecione seu estado", ""));
         getBase().add(new Estado("Acre", "AC"));
         getBase().add(new Estado("Alagoas", "AL"));
         getBase().add(new Estado("Amapá", "AP"));

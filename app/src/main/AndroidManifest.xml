@@ -23,9 +23,10 @@
         <activity
             android:name=".Tanques"
             android:label="@string/title_activity_tanques"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddTanque" />
         <activity android:name=".Biometria"></activity>
+        <activity android:name=".Cadastro" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".AddTanque" />
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

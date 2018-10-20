@@ -24,9 +24,9 @@ public class Home extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        email = findViewById(R.id.email);
+        email = findViewById(R.id.senhaCadastro);
         senha = findViewById(R.id.senha);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.login);
 
         usuarioDao = new UsuarioDao();
     }
@@ -42,5 +42,10 @@ public class Home extends AppCompatActivity{
         }else{
             Toast.makeText(getBaseContext(), "Senha ou E-mail incorretos" , Toast.LENGTH_SHORT ).show();
         }
+    }
+
+    public void cadastro(View view){
+        Intent vrintention = new Intent(this, Cadastro.class);
+        startActivity(vrintention);
     }
 }

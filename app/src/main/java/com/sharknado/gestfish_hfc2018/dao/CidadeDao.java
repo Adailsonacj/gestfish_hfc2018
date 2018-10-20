@@ -26,7 +26,7 @@ public class CidadeDao extends DaoGenerica<Cidade> {
                 cidades.add(c);
             }
         }
-        return cidades.isEmpty() ? null : cidades;
+        return cidades.isEmpty() ? new ArrayList<Cidade>() : cidades;
     }
 
     public Cidade findByNome(String nome){
