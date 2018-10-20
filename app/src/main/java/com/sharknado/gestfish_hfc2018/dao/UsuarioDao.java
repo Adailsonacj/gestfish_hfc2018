@@ -8,7 +8,7 @@ public class UsuarioDao  extends DaoGenerica<Usuario>{
         super();
         getBase().add(new Usuario("Daniel", "Carvalho", "teste1@gmail.com", "teste", TipoProducao.INTENSIVO));
         getBase().add(new Usuario("Nareilson", "Bispo", "teste3@gmail.com", "teste", TipoProducao.SEMI_INTENSIVO));
-        getBase().add(new Usuario("Adailson", "Aguiar", ".", "."));
+        getBase().add(new Usuario("Adailson", "Aguiar", ".", ".", TipoProducao.SEMI_INTENSIVO));
     }
 
     public Usuario findByEmail(String email){
