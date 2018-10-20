@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".AddTanque">
 
 
@@ -14,117 +14,178 @@
         android:id="@+id/textView16"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="91dp"
-        
+        android:layout_below="@+id/textViewUltima"
+
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="18dp"
         android:text="Biomassa Total:"
         android:textAlignment="textEnd"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/textView14"
-        android:layout_width="240dp"
+        android:id="@+id/ediRec"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView10"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="62dp"
-        android:padding="10pd"
-        android:text="2"
-        android:textColor="@color/colorPrimaryDark"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="253dp"
-        android:layout_toEndOf="@+id/textView15"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
         android:text="Sua última biometria neste tanque foi a 13 dias!"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
-        android:layout_height="102dp"
-        android:layout_alignEnd="@+id/textView10"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="14dp"
+        android:background="@android:color/darker_gray"
         android:text="Recomendações"
-        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@color/colorWhite"
         android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewUltima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:background="@android:color/darker_gray"
+        android:text="Última Bimometria"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/registrarBiometria"
-        android:layout_width="130dp"
-        android:layout_height="32dp"
+        android:layout_width="135dp"
+        android:layout_height="38dp"
 
-        android:layout_below="@+id/textView13"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ediRec"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:layout_marginBottom="293dp"
+        android:layout_marginTop="14dp"
         android:background="@color/colorBotaoPrimary"
         android:onClick="registrarBiometria"
         android:text="Nova Biometria"
-        android:textColor="@color/colorAccent"
-        android:textColorLink="@color/colorAccent" />
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="240dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="81dp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
+        android:layout_toEndOf="@+id/textView3"
         android:padding="0dp"
         android:text="Diminua em 4 %"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_toEndOf="@+id/textView7"
+        android:padding="0dp"
+        android:text="2"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView10"
-        android:layout_marginTop="-40dp"
-        
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="6dp"
         android:text="Tratos diários:"
         android:textAlignment="textEnd"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="240dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView14"
         android:layout_alignTop="@+id/textView16"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="-53dp"
-        
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/textView16"
         android:text="600g"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView18"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/textView18"
+        android:text="01/10/2018"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
-        
+        android:layout_below="@+id/textView18"
+
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
         android:text="Proteína Bruta:"
         android:textAlignment="textEnd"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="23dp"
+        android:text="Data:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorWhite"
+        android:textColorLink="@color/colorWhite"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 

@@ -16,7 +16,9 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Taxa de alimentação"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorHint" />
 
     <EditText
         android:id="@+id/editQtd"
@@ -27,7 +29,9 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Qtd. de peixes"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorHint" />
 
     <EditText
         android:id="@+id/editBiomassa"
@@ -40,7 +44,9 @@
         android:layout_marginBottom="273dp"
         android:ems="10"
         android:hint="Biomassa Total"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorHint" />
 
     <EditText
         android:id="@+id/editTaxaMort"
@@ -51,7 +57,9 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Taxa de Mortalidade"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorHint" />
 
     <Button
         android:id="@+id/Registrar"
@@ -76,6 +84,8 @@
         android:layout_marginTop="20dp"
         android:text="Biometria"
         android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorHint"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -89,6 +99,8 @@
         android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Amostra"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorHint" />
 
 </RelativeLayout>
