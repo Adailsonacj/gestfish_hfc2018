@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">gestfish_hfc2018</string>
+    <string name="login">Login</string>
 </resources>
