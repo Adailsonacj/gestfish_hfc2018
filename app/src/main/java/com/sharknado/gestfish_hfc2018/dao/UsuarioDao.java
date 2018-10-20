@@ -3,7 +3,11 @@ package com.sharknado.gestfish_hfc2018.dao;
 import com.sharknado.gestfish_hfc2018.model.TipoProducao;
 import com.sharknado.gestfish_hfc2018.model.Usuario;
 
+import java.util.ArrayList;
+
 public class UsuarioDao  extends DaoGenerica<Usuario>{
+    private static ArrayList<Usuario> usuarios = new ArrayList<>();
+
     public UsuarioDao() {
         super();
         getBase().add(new Usuario("Daniel", "Carvalho", "teste1@gmail.com", "teste", TipoProducao.INTENSIVO));
@@ -18,5 +22,14 @@ public class UsuarioDao  extends DaoGenerica<Usuario>{
             }
         }
         return null;
+    }
+
+    public void insert(Usuario u){
+        getBase().add(u);
+    }
+
+    @Override
+    public ArrayList<Usuario> getBase() {
+        return usuarios;
     }
 }

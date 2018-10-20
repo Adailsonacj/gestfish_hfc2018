@@ -12,9 +12,11 @@ import android.widget.Toast;
 
 import com.sharknado.gestfish_hfc2018.dao.CidadeDao;
 import com.sharknado.gestfish_hfc2018.dao.EstadoDao;
+import com.sharknado.gestfish_hfc2018.dao.UsuarioDao;
 import com.sharknado.gestfish_hfc2018.model.Cidade;
 import com.sharknado.gestfish_hfc2018.model.Estado;
 import com.sharknado.gestfish_hfc2018.model.TipoProducao;
+import com.sharknado.gestfish_hfc2018.model.Usuario;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +25,7 @@ import java.util.List;
 public class Cadastro extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private EstadoDao estadoDao;
     private CidadeDao cidadeDao;
+    private UsuarioDao usuarioDao;
 
     private Spinner cidades;
     private Spinner estados;
@@ -40,6 +43,7 @@ public class Cadastro extends AppCompatActivity implements AdapterView.OnItemSel
 
         estadoDao = new EstadoDao();
         cidadeDao = new CidadeDao();
+        usuarioDao = new UsuarioDao();
 
         estados = findViewById(R.id.estados);
         cidades = findViewById(R.id.cidades);
@@ -95,8 +99,10 @@ public class Cadastro extends AppCompatActivity implements AdapterView.OnItemSel
         if (fail){
             return;
         }
-        Intent vrintention = new Intent(this, Tanques.class);
+        Intent vrintention = new Intent(this, Home.class);
+        usuarioDao.insert(new Usuario(nome.getText().toString(), sobrenome.getText().toString(), email.getText().toString(), senha.getText().toString(), (TipoProducao) tipos.getSelectedItem()));
         Toast.makeText(getBaseContext(), "Cadastro realizado com sucesso" , Toast.LENGTH_SHORT ).show();
         startActivity(vrintention);
+        finish();
     }
 }

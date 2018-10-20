@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class fichaComercializacaoDAO {
 
-    private ArrayList<fichaComercializacao> listaFichas = new ArrayList<>();
+    private static ArrayList<fichaComercializacao> listaFichas = new ArrayList<>();
 
     public ArrayList<fichaComercializacao> getListaFichas() {
         return listaFichas;

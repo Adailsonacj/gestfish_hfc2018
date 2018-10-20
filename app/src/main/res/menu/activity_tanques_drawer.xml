@@ -6,15 +6,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@mipmap/baseline_local_atm_black_18dp"
             android:title="Comercialização" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@mipmap/baseline_person_add_black_18dp"
             android:title="Cadastrar novo usuário" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/baseline_location_on_black_18dp"
             android:title="Locais de venda próximos" />
         <item
             android:id="@+id/nav_manage"

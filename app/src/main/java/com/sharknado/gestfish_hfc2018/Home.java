@@ -47,5 +47,6 @@ public class Home extends AppCompatActivity{
     public void cadastro(View view){
         Intent vrintention = new Intent(this, Cadastro.class);
         startActivity(vrintention);
+        finish();
     }
 }
