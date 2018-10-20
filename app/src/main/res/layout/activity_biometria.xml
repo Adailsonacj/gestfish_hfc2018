@@ -1,153 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical"
     tools:context=".AddTanque">
 
 
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="91dp"
+        
+        android:text="Biomassa Total:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="62dp"
+        android:padding="10pd"
+        android:text="2"
+        android:textColor="@color/colorPrimaryDark"
+        tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Biomassa Total:"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                tools:ignore="HardcodedText" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="UselessLeaf" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="UselessLeaf" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="UselessLeaf" />
-    </TableLayout>
-
-    <LinearLayout
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical">
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="253dp"
+        android:layout_toEndOf="@+id/textView15"
+        android:text="Sua última biometria neste tanque foi a 13 dias!"
+        android:textColor="@color/colorPrimaryDark"
+        tools:ignore="HardcodedText" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sua última biometria neste tanque foi a 13 dias!"
-            android:textColor="@color/colorPrimaryDark"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Recomendações"
-            android:textSize="18sp"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
-
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Proteína Bruta:"
-                android:textColor="@color/colorPrimaryDark"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" Diminua em 4 %"
-                tools:ignore="HardcodedText" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tratos diários:"
-                android:textColor="@color/colorPrimaryDark"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2"
-                tools:ignore="HardcodedText" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
-    </TableLayout>
-
-    <Button
-        android:id="@+id/addTanque"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="addTanque"
-        android:text="Salvar"
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_alignEnd="@+id/textView10"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="0dp"
+        android:text="Recomendações"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/registrarBiometria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="registrarBiometria"
-        android:text="Button" />
+        android:layout_width="130dp"
+        android:layout_height="32dp"
 
-</LinearLayout>
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="293dp"
+        android:background="@color/colorBotaoPrimary"
+        android:onClick="registrarBiometria"
+        android:text="Nova Biometria"
+        android:textColor="@color/colorAccent"
+        android:textColorLink="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="0dp"
+        android:padding="0dp"
+        android:text="Diminua em 4 %"
+        android:textColor="@color/colorPrimaryDark"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_marginTop="-40dp"
+        
+        android:text="Tratos diários:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="-53dp"
+        
+        android:text="600g"
+        android:textColor="@color/colorPrimaryDark"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        
+        android:text="Proteína Bruta:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
