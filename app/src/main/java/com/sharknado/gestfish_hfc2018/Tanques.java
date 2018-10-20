@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.sharknado.gestfish_hfc2018.dao.TanqueDao;
 import com.sharknado.gestfish_hfc2018.model.TanqueModel;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class Tanques extends AppCompatActivity
 
     ListView listView;
     TanquesAdapter tanquesAdapter;
-    public static ArrayList<TanqueModel> tanques = new ArrayList<>();
+    TanqueDao tanqueDao = new TanqueDao();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +36,7 @@ public class Tanques extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         listView = findViewById(R.id.listTanques);
-        tanques.add(new TanqueModel("Tanque Escavado", "Semi-Intensivo", "Tambaqui", 20, 1000));
-        tanques.add(new TanqueModel("Tanque Rede", "Intensivo", "Pacu", 50, 2000));
-        tanques.add(new TanqueModel("Tanque Elevado", "Intensivo", "Tilápia", 60, 2000));
+        ArrayList<TanqueModel> tanques = tanqueDao.findAll();
         tanquesAdapter = new TanquesAdapter(this, tanques);
         listView.setAdapter(tanquesAdapter);
 
