@@ -9,6 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.sharknado.gestfish_hfc2018.dao.EspecieDao;
+import com.sharknado.gestfish_hfc2018.model.Especie;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,12 +42,8 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
         ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listTipoProducao);
         spTipoProducao.setAdapter(arrayAdapter1);
         spEspecie = findViewById(R.id.spEspecie);
-        List<String> especie = new ArrayList<>();
-        especie.add("Tilápia");
-        especie.add("Tambaqui");
-        especie.add("Pacu");
-        especie.add("Tambacu");
-        ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, especie);
+        EspecieDao es = new EspecieDao();
+        ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, es.findAll());
         spEspecie.setAdapter(arrayAdapter2);
     }
 

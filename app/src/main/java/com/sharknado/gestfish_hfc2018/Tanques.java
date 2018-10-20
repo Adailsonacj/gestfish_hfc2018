@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.sharknado.gestfish_hfc2018.model.TanqueModel;
@@ -39,6 +40,13 @@ public class Tanques extends AppCompatActivity
         tanques.add(new TanqueModel("Tanque Elevado", "Intensivo", "Tilápia", 60, 2000));
         tanquesAdapter = new TanquesAdapter(this, tanques);
         listView.setAdapter(tanquesAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent it = new Intent(Tanques.this, Biometria.class);
+                startActivity(it);
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.addTanque);
 
