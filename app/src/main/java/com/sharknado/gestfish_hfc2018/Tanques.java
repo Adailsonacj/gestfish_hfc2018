@@ -24,9 +24,9 @@ import java.util.ArrayList;
 public class Tanques extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ListView listView;
-    TanquesAdapter tanquesAdapter;
-    TanqueDao tanqueDao = new TanqueDao();
+    private ListView listView;
+    private TanquesAdapter tanquesAdapter;
+    private TanqueDao tanqueDao = new TanqueDao();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
