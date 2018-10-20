@@ -14,9 +14,9 @@ public class TanqueDao extends DaoGenerica<TanqueModel> {
     public TanqueDao() {
         super();
         if (models.isEmpty()){
-        models.add(new TanqueModel("Tanque Escavado", especieDao.findByNome("Tilápia"),  20, 1000));
-        models.add(new TanqueModel("Tanque Rede", especieDao.findByNome("Pacu"),  50, 2000));
-        models.add(new TanqueModel("Tanque Elevado", especieDao.findByNome("Tambacu"), 60, 2000));}
+        models.add(new TanqueModel(models.size()+1,"Tanque Escavado", especieDao.findByNome("Tilápia"),  20, 1000));
+        models.add(new TanqueModel(models.size()+1,"Tanque Rede", especieDao.findByNome("Pacu"),  50, 2000));
+        models.add(new TanqueModel(models.size()+1,"Tanque Elevado", especieDao.findByNome("Tambacu"), 60, 2000));}
     }
 
     public void insertTanque(TanqueModel tanqueModel){

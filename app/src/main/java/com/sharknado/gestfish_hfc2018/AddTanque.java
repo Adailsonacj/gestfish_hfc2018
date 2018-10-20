@@ -59,10 +59,10 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
 
     public void addTanque(View view) {
         if (!tamanho.getText().toString().equals("")&&!quantidade.getText().toString().equals("")) {
-            TanqueModel tm = new TanqueModel((String) spTipo.getSelectedItem(), (Especie) spEspecie.getSelectedItem(), Float.valueOf(tamanho.getText().toString()).floatValue(), Integer.valueOf(quantidade.getText().toString()));
             td.insertTanque(tm);
             finish();
         }
+        TanqueModel tm = new TanqueModel(td.getBase().size()+1, (String)spTipo.getSelectedItem(), (Especie) spEspecie.getSelectedItem(), Float.valueOf(tamanho.getText().toString()).floatValue(), Integer.valueOf(quantidade.getText().toString()));
     }
 
     @Override
