@@ -143,4 +143,11 @@
         android:text="Salvar"
         tools:ignore="HardcodedText" />
 
+    <Button
+        android:id="@+id/registrarBiometria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="registrarBiometria"
+        android:text="Button" />
+
 </LinearLayout>

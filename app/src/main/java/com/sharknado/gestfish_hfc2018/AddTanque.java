@@ -70,4 +70,9 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
         startActivity(new Intent(this, Tanques.class));
         super.finish();
     }
+
+    public void registrarBiometria(View view) {
+        startActivity(new Intent(this, CadastrarBiometria.class));
+        super.finish();
+    }
 }

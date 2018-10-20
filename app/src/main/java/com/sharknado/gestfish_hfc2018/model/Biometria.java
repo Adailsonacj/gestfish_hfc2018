@@ -1,18 +1,30 @@
 package com.sharknado.gestfish_hfc2018.model;
 
+import java.util.Date;
+
 public class Biometria {
+    private Date data;
     private String taxaAlimentacao;
     private String qtdPeixes;
     private String biomassaTotal;
     private String taxaMortalidade;
     private String QtdAmostra;
 
-    public Biometria(String taxaAlimentacao, String qtdPeixes, String biomassaTotal, String taxaMortalidade, String qtdAmostra) {
+    public Biometria(Date data, String taxaAlimentacao, String qtdPeixes, String biomassaTotal, String taxaMortalidade, String qtdAmostra) {
+        this.data = data;
         this.taxaAlimentacao = taxaAlimentacao;
         this.qtdPeixes = qtdPeixes;
         this.biomassaTotal = biomassaTotal;
         this.taxaMortalidade = taxaMortalidade;
         QtdAmostra = qtdAmostra;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
     }
 
     public String getTaxaAlimentacao() {
