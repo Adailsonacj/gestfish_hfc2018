@@ -16,7 +16,7 @@
         android:layout_height="37dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="40dp"
         android:text="Adicionar Tanque"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
@@ -37,12 +37,12 @@
         android:id="@+id/editTamanho"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spTipo"
+        android:layout_below="@+id/spEspecie"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="19dp"
+        android:focusable="true"
         android:ems="10"
-        android:hint="Digite aqui"
+        android:hint="Tamanho do tanque"
         android:inputType="number"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorHint" />
@@ -51,9 +51,9 @@
         android:id="@+id/spTipo"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@+id/spEspecie"
+        android:layout_below="@+id/editQtd"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="22dp"
         android:visibility="visible" />
 
     <EditText
@@ -64,8 +64,9 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="18dp"
+        android:focusable="true"
         android:ems="10"
-        android:hint="Digite aqui"
+        android:hint="Quantidade de peixes"
         android:inputType="textUri|number"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorHint" />
@@ -74,15 +75,25 @@
         android:id="@+id/addTanque"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
-        android:layout_below="@+id/editQtd"
+        android:layout_below="@+id/spTipo"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="59dp"
         android:background="@color/colorBotaoPrimary"
         android:onClick="addTanque"
         android:text="Salvar"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorHint" />
+
+    <TextView
+        android:id="@+id/twDica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="167dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
 
 </RelativeLayout>

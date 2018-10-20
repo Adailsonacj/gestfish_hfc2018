@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.sharknado.gestfish_hfc2018.dao.EspecieDao;
 import com.sharknado.gestfish_hfc2018.dao.TanqueDao;
@@ -24,6 +25,9 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
     private Spinner spEspecie;
     private EditText tamanho;
     private EditText quantidade;
+    private TextView twDica;
+    private List<String> listTipo = new ArrayList<>();
+    ArrayAdapter<String> arrayAdapter;
 
     TanqueDao td = new TanqueDao();
 
@@ -35,29 +39,53 @@ public class AddTanque extends AppCompatActivity implements AdapterView.OnItemSe
         spTipo = findViewById(R.id.spTipo);
         tamanho = findViewById(R.id.editTamanho);
         quantidade = findViewById(R.id.editQtd);
-        List<String> listTipo = new ArrayList<>();
+
         listTipo.add("Tanque-Escavado");
         listTipo.add("Tanque-Rede");
-        listTipo.add("Tanque-Escavado");
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listTipo);
+        listTipo.add("Tanque-Elevado");
+        arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listTipo);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         spTipo.setAdapter(arrayAdapter);
+        twDica = findViewById(R.id.twDica);
+
         EspecieDao es = new EspecieDao();
         spEspecie = findViewById(R.id.spEspecie);
-
         ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, es.getBase());
         spEspecie.setAdapter(arrayAdapter2);
+        spTipo.setOnItemSelectedListener(this);
     }
 
+
     public void addTanque(View view) {
-        TanqueModel tm = new TanqueModel((String)spTipo.getSelectedItem(), (Especie) spEspecie.getSelectedItem(), Float.valueOf(tamanho.getText().toString()).floatValue(), Integer.valueOf(quantidade.getText().toString()));
-        td.insertTanque(tm);
-        finish();
+        if (!tamanho.getText().toString().equals("")&&!quantidade.getText().toString().equals("")) {
+            TanqueModel tm = new TanqueModel((String) spTipo.getSelectedItem(), (Especie) spEspecie.getSelectedItem(), Float.valueOf(tamanho.getText().toString()).floatValue(), Integer.valueOf(quantidade.getText().toString()));
+            td.insertTanque(tm);
+            finish();
+        }
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
+        if (listTipo.get(position).equals("Tanque-Rede")) {
+            if (!tamanho.getText().toString().equals("")) {
+                float media = 175 * Float.parseFloat(tamanho.getText().toString());
+                twDica.setText(String.valueOf("Dica: Você pode criar em média " + media + " peixes nesse tanque!"));
+            }
+        }
+        if (listTipo.get(position).equals("Tanque-Escavado")) {
+            if (!tamanho.getText().toString().equals("")) {
+                float media = 30 * Float.parseFloat(tamanho.getText().toString());
+                twDica.setText(String.valueOf("Dica: Você pode criar em média " + media + " peixes nesse tanque!"));
+            }
+        }
+        if (listTipo.get(position).equals("Tanque-Elevado")) {
+            if (!tamanho.getText().toString().equals("")) {
+                float media = 35 * Float.parseFloat(tamanho.getText().toString());
+                twDica.setText(String.valueOf("Dica: Você pode criar em média " + media + " peixes nesse tanque!"));
+            }
+        }
     }
 
     @Override
